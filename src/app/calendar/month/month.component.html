@@ -1,0 +1,17 @@
+<div class="container-fluid">
+  <h1>{{currentMonthName}}</h1>
+  <br>
+  <hr>
+  <table class="table table-striped">
+    <thead>
+      <th style="width:14%; text-align: center;" *ngFor="let day of daysOfTheWeek">{{ day }}</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let week of weeks">
+        <td *ngFor="let day of week" style="width: 100px; height: 100px;">
+          <app-day [date]="day"></app-day>
+        </td> 
+      </tr>
+    </tbody>
+  </table>
+</div>
